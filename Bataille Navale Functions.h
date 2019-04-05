@@ -4,13 +4,11 @@
 //
 #ifndef BATAILLENAVALE_BATAILLE_NAVALE_FUNCTIONS_H
 #define BATAILLENAVALE_BATAILLE_NAVALE_FUNCTIONS_H
-
 #define GRIDSIZE 10
 #define SMALLSHIPHP 2
 #define MEDIUMSHIPHP 3
 #define LARGESHIPHP 4
 #define HUGESHIPHP 5
-
 //Display The Grid
 void displayGrid(char grid [GRIDSIZE][GRIDSIZE])
 {
@@ -52,70 +50,80 @@ void displayGrid(char grid [GRIDSIZE][GRIDSIZE])
 void play(int grid[GRIDSIZE][GRIDSIZE], char visualgrid[GRIDSIZE][GRIDSIZE])
 {
     system("cls");
-    int smallhp = SMALLSHIPHP, mediumhp = MEDIUMSHIPHP, largehp = LARGESHIPHP, hugehp = HUGESHIPHP,numberOfShips = 4,row,col;
+    int smallhp = SMALLSHIPHP, mediumhp = MEDIUMSHIPHP, largehp = LARGESHIPHP, hugehp = HUGESHIPHP,numberOfShips = 4, score = 0,row,col;
     char hit;
     bool GameIsActive = true;
     while (GameIsActive)
     {
         displayGrid(visualgrid);
+        printf("Your current score: %d \n",score);
         printf("choose a column (x axis): ");
         scanf("%d", &col);
         printf("choose a row (y axis): ");
         scanf("%d", &row);
         hit = grid[row][col];
+        score++;
         system("cls");
         switch (hit)
         {
+            case 1:
+                printf("You already shot there...Try again\n\n");
+                break;
             case 2:
-                printf("Ya just hit a smol one...\n\n");
+                printf("You just hit a smol one...\n\n");
                 visualgrid[row][col] = 's';
+                grid[row][col] = 1;
                 smallhp--;
                 if(smallhp == 0)
                 {
-                    printf("Ya sunk a babyship.\n\n");
+                    printf("You sunk a babyship.\n\n");
                     numberOfShips--;
                 }
                 break;
             case 3:
-                printf("Ya just hit a medium one...\n\n");
+                printf("You just hit a medium one...\n\n");
                 visualgrid[row][col] = 'm';
+                grid[row][col] = 1;
                 mediumhp--;
                 if(mediumhp == 0)
                 {
-                    printf("Ya sunk a medium one.\n\n");
+                    printf("You sunk a medium one.\n\n");
                     numberOfShips--;
                 }
                 break;
             case 4:
-                printf("Ya just hit a big one !\n\n");
+                printf("You just hit a big one !\n\n");
                 visualgrid[row][col] = 'l';
+                grid[row][col] = 1;
                 largehp--;
                 if(largehp == 0)
                 {
-                    printf("Ya sunk a big boi.\n\n");
+                    printf("You sunk a big boi.\n\n");
                     numberOfShips--;
                 }
                 break;
             case 5:
-                printf("ya just hit a huge one !!\n\n");
+                printf("you just hit a huge one !!\n\n");
                 visualgrid[row][col] = 'h';
+                grid[row][col] = 1;
                 hugehp--;
                 if(hugehp == 0)
                 {
-                    printf("Ya sunk a big boss !\n\n");
+                    printf("You sunk a big boss !\n\n");
                     numberOfShips--;
                 }
                 break;
             default:
-                printf("Ya hit a miss !\n\n");
+                printf("You hit a miss !\n\n");
                 visualgrid[row][col] = 'x';
+                grid[row][col] = 1;
                 break;
         }
         if(numberOfShips == 0 )
             GameIsActive = false;
     }
-    //that's what you get
     printf("Congrats ! You won !\n\nYour Reward:\n-Nothing\n\n");
+    printf("Your final score: %d \n",score);
 }
 //Choose Grid
 void chooseGrid(int grid1 [GRIDSIZE][GRIDSIZE] ,int grid2 [GRIDSIZE][GRIDSIZE] ,int grid3 [GRIDSIZE][GRIDSIZE],char visualgrid[GRIDSIZE][GRIDSIZE])
@@ -144,22 +152,22 @@ void chooseGrid(int grid1 [GRIDSIZE][GRIDSIZE] ,int grid2 [GRIDSIZE][GRIDSIZE] ,
                 default:
                     break;
             }
-            break;
+        break;
         case 2:
             system("cls");
             printf("Please Choose a grid : \n Grid #1 - 1 \n Grid #2 - 2\n Grid #3 - 3\n");
             scanf("%d", &choice);
             switch (choice)
             {
-            case 1:
-                play(grid1, visualgrid);
-                break;
-            case 2:
-                play(grid2, visualgrid);
-                break;
-            case 3:
-                play(grid3, visualgrid);
-                break;
+                case 1:
+                    play(grid1, visualgrid);
+                    break;
+                case 2:
+                    play(grid2, visualgrid);
+                    break;
+                case 3:
+                    play(grid3, visualgrid);
+                    break;
                 default:
                     break;
             }
