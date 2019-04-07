@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "BatailleNavale.pdb"
   "BatailleNavale.exe"
   "BatailleNavale.exe.manifest"
-  "libBatailleNavale.dll.a"
+  "BatailleNavale.lib"
 )
 
 # Per-language clean rules from dependency scanning.

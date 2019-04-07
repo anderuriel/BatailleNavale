@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Sandbox/CLion-2018.2.6/BatailleNavale/main.c" "C:/Sandbox/CLion-2018.2.6/BatailleNavale/cmake-build-debug/CMakeFiles/BatailleNavale.dir/main.c.obj"
+  "D:/CPNV/BatailleNavale/BatailleNavale/main.c" "D:/CPNV/BatailleNavale/BatailleNavale/cmake-build-debug/CMakeFiles/BatailleNavale.dir/main.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

@@ -50,7 +50,7 @@ void displayGrid(char grid [GRIDSIZE][GRIDSIZE])
 void play(int grid[GRIDSIZE][GRIDSIZE], char visualgrid[GRIDSIZE][GRIDSIZE])
 {
     system("cls");
-    int smallhp = SMALLSHIPHP, mediumhp = MEDIUMSHIPHP, largehp = LARGESHIPHP, hugehp = HUGESHIPHP,numberOfShips = 4, score = 0,row,col;
+    int smallhp = SMALLSHIPHP, mediumhp = MEDIUMSHIPHP, largehp = LARGESHIPHP, hugehp = HUGESHIPHP,numberOfShips = 4, score = 100,row,col;
     char hit;
     bool GameIsActive = true;
     while (GameIsActive)
@@ -62,7 +62,6 @@ void play(int grid[GRIDSIZE][GRIDSIZE], char visualgrid[GRIDSIZE][GRIDSIZE])
         printf("choose a row (y axis): ");
         scanf("%d", &row);
         hit = grid[row][col];
-        score++;
         system("cls");
         switch (hit)
         {
@@ -117,6 +116,7 @@ void play(int grid[GRIDSIZE][GRIDSIZE], char visualgrid[GRIDSIZE][GRIDSIZE])
                 printf("You hit a miss !\n\n");
                 visualgrid[row][col] = 'x';
                 grid[row][col] = 1;
+                score--;
                 break;
         }
         if(numberOfShips == 0 )

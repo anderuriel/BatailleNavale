@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Sandbox/CLion-2018.2.6/BatailleNavale/Bataille Navale Functions.h
+D:/CPNV/BatailleNavale/BatailleNavale/Bataille Navale Functions.h
 
-C:/Sandbox/CLion-2018.2.6/BatailleNavale/Grids.h
+D:/CPNV/BatailleNavale/BatailleNavale/Grids.h
 
-C:/Sandbox/CLion-2018.2.6/BatailleNavale/main.c
+D:/CPNV/BatailleNavale/BatailleNavale/main.c
 stdio.h
 -
 windows.h
@@ -22,7 +22,7 @@ time.h
 stdbool.h
 -
 Bataille Navale Functions.h
-C:/Sandbox/CLion-2018.2.6/BatailleNavale/Bataille Navale Functions.h
+D:/CPNV/BatailleNavale/BatailleNavale/Bataille Navale Functions.h
 Grids.h
-C:/Sandbox/CLion-2018.2.6/BatailleNavale/Grids.h
+D:/CPNV/BatailleNavale/BatailleNavale/Grids.h
 

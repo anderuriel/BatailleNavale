@@ -1,4 +1,4 @@
-# Install script for directory: C:/Sandbox/CLion-2018.2.6/BatailleNavale
+# Install script for directory: D:/CPNV/BatailleNavale/BatailleNavale
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Sandbox/CLion-2018.2.6/BatailleNavale/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/CPNV/BatailleNavale/BatailleNavale/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
